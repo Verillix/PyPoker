@@ -13,15 +13,7 @@
     </style>
     </head>
     <body>
-    <button id="bruh" py-click="randomNum()">Click Me!</button>
-    <py-script>
-        import random
-        from js import Document
-        def randomNum():
-              number = random.randint(1,10)
-              p = document.getElementById("Text")
-              p.write("Hello World!")
-    </py-script>
+    <button id="bruh" onclick="randomNum()">Click Me!</button>
     <p id="Text"></p>
     <img id="img1" src="" alt="">
     <img id="img2" src="" alt="">
