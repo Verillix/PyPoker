@@ -46,9 +46,9 @@ def pokerGame():
     totalMoney = moneyCarryover
   except:
     totalMoney = 1000
-  print("=" * len("Your current balance is: " + str(totalMoney)))
-  print("Your current balance is: " + str(totalMoney))
-  print("=" * len("Your current balance is: " + str(totalMoney)))
+  
+  
+  
   for i in range(2):
     hand.append(random.choice(deck))
     deck.remove(hand[i])
@@ -66,8 +66,8 @@ def pokerGame():
   def calculateCPU(handC):
     handStorageC = handC.copy()
     totalCardsC = handStorageC + river
-    print(handStorageC)
-    print(totalCardsC)
+    
+    
     global bestHandC
     bestHandC = []
     straightTotalStorageC = []
@@ -84,7 +84,7 @@ def pokerGame():
         straightTotalStorageC.append(handStorageC[c])
     for i in range(len(handStorageC)):
       currentCardCH = handStorageC[i]
-      print(currentCardCH)
+      
       totalCardsC.remove(currentCardCH)
       fCounterCH = 0
       pCounterCH = 0
@@ -424,86 +424,86 @@ def pokerGame():
       cpuBet = 0
       for i in range(10):
           doBet = random.choices([1,2], weights = (30,70), k=1)
-          print(doBet)
+          
           if doBet[0] == 1:
               cpuBet = 100
           elif doBet[0] == 2:
               cpuBet = 0
-          print(cpuBet)
+          
   totalMoney = totalMoney - buyIn
-  print("*****************************")
-  print("your hand is:", hand)
-  print("*****************************")
+  
+  
+  
   currentBet = int(input("How much would you like to bet (0 for stand)?: "))
   cpuBet1()
   if currentBet == -1:
-    print("-----------------------------")
-    print("You have folded")
-    print("-----------------------------")
+    
+    
+    
     calculate()
   elif currentBet == 0:
-    print("-----------------------------")
-    print("You stand")
-    print("-----------------------------")
+    
+    
+    
   else:
     while currentBet > totalMoney:
-      print("You don't have enough money to bet that much")
+      
       currentBet = int(input("How much would you like to bet (0 for stand)?: "))
     totalMoney = totalMoney - currentBet
     pot = pot + currentBet
-  print("∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼")
-  print("The river is:", riverStorage[0:3], "[x]", "[x]")
-  print("∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼")
+  
+  
+  
   currentBet = int(
       input(
           "How much would you like to bet on round 2 (0 for stand, -1 for fold)?: "
       ))
   if currentBet == -1:
-    print("You have folded")
+    
     calculate()
   elif currentBet == 0:
-    print("-----------------------------")
-    print("You stand")
-    print("-----------------------------")
-    print("∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼")
-    print("The river is:", riverStorage[0:4], "[x]")
-    print("∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼")
+    
+    
+    
+    
+    
+    
   else:
     while currentBet > totalMoney:
-      print("You don't have enough money to bet that much")
+      
       currentBet = int(
           input(
               "How much would you like to bet on round 2 (0 for stand, -1 for fold)?: "
           ))
     totalMoney = totalMoney - currentBet
     pot = pot + currentBet
-    print("∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼")
-    print("The river is:", riverStorage[0:4], "[x]")
-    print("∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼")
+    
+    
+    
   currentBet = int(
       input(
           "How much would you like to bet on round 3 (0 for stand, -1 for fold)?: "
       ))
   if currentBet == -1:
-    print("You have folded")
+    
     calculate()
   elif currentBet == 0:
-    print("You stand")
-    print("∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼")
-    print("The river is:", riverStorage[0:5])
-    print("∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼")
+    
+    
+    
+    
   else:
     while currentBet > totalMoney:
-      print("You don't have enough money to bet that much")
+      
       currentBet = int(
           input(
               "How much would you like to bet on round 3 (0 for stand, -1 for fold)?: "
           ))
     totalMoney = totalMoney - currentBet
     pot = pot + currentBet
-    print("∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼")
-    print("The river is:", riverStorage[0:5])
-    print("∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼")
+    
+    
+    
   
   def handScoreC():
     global handScore
@@ -532,38 +532,27 @@ def pokerGame():
   totalMoney = totalMoney - currentBet
   pot = pot + currentBet
   if currentBet == -1:
-    print("-----------------------------")
-    print("You have folded")
-    print("-----------------------------")
     return()
   elif currentBet == 0:
     while currentBet > totalMoney:
-      print("You don't have enough money to bet that much")
       currentBet = int(input("Place your finals bets (0 for stand, -1 for fold)!: "))
-    print("-----------------------------")
-    print("You stand")
-    print("-----------------------------")
     calculate()
     handScoreC()
     calculateCPU(handCPU)
-    print(bestHandC)
-    print("-----------------------------")
-    print("Your hand had a: ",bestHand[0])
   try:
     if totalMoney - moneyCarryover <= 0:
-      print("You lost:", pot)
     else:
-      print("You won:", (pot * 1.75)- pot)
+      
   except:
     if totalMoney - 1000 <= 0:
-      print("You lost:", pot)
+      
     else:
-      print("You won:", (pot * 1.75)- pot)
-  print("In total you have: ", totalMoney)
-  print("----------------------------------------------------------------------")
+      
+  
+  
   global playAgain
   playAgain = str(input("Would you like to play another hand? (y/n): ")).lower()
-  print("----------------------------------------------------------------------")
+  
 
 
 
@@ -574,10 +563,10 @@ def pokerGame():
 
 pokerGame()
 if currentBet == -1:
-  print("----------------------------------------------------------------------")
+  
   global playAgain
   playAgain = str(input("Would you like to play another hand? (y/n): ")).lower()
-  print("----------------------------------------------------------------------")
+  
 while playAgain == "y" or playAgain == "yes":
   moneyCarryover = totalMoney
   pokerGame()
