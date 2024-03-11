@@ -20,8 +20,10 @@
 
         function randomNum() {
             const number = random.randint(1, 10);
-            const p = Document.getElementById("Text");
+            const p = document.getElementById("Text");
             p.write("Hello World!");
+            image = document.getElementById("img1");
+            image.setAttribute("src","Cards/2c.png")
         }
     </script>
     <p id="Text"></p>
