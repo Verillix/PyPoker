@@ -13,7 +13,15 @@
     </style>
     </head>
     <body>
-    <script type="py" src="./main.py" config="./pyscript.json"></script>
+    <script type="py" src="./main.py" config="./pyscript.json">
+        from js import Document
+        
+        img1 = hand[0]
+        img1URL = ("Cards/"+img1+".png")
+        img2 = hand[1]
+        image = document.getElementById("img")
+        image.setAttribute("src", img1URL)
+    </script>
     <img id="img" src="" alt="">
     </body>
 </html>
