@@ -5,11 +5,11 @@
     </head>
     <body>
     <py-script>
-        from pyscript import document
+        from js import document
         img = "2c.png"
         image = document.getElementById("img")
-        image.setAttribute("src", img)
+        image.src = img
     </py-script>
-    <img id="img" src="src">
+    <img id="img" src=>
     </body>
 </html>
