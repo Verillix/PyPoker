@@ -18,11 +18,12 @@
               ]
             card = random.choice(deck)
             img = (card+".png")
-            pyscript.write(img)
+            pyscript.write("text",img)
             image = document.getElementById("img")
             image.src = card
             image.alt = card
     </py-script>
     <img id="img" src="" alt="">
+    <p id="text"></p>
     </body>
 </html>
