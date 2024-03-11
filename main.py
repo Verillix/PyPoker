@@ -1,6 +1,7 @@
 import random
 from itertools import combinations
 import contextlib
+from js import Document
 #Generating random hands and checking to see what you have
 def pokerGame():
   global deck
@@ -52,6 +53,8 @@ def pokerGame():
   for i in range(2):
     hand.append(random.choice(deck))
     deck.remove(hand[i])
+    image = document.getElementById("img"+str(i+1))
+    image.setAttribute("src", ("Cards/"+hand[i]+".png"))
   for i in range(2):
     handCPU.append(random.choice(deck))
     deck.remove(handCPU[i])
