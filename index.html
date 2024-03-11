@@ -5,10 +5,9 @@
     </head>
     <body>
     <py-script>
-        import base64
-        data_uri = base64.b64encode(open('/2c.png').read().encode('base64').replace('\n', ''))
-        img_tag = '<img src="data:image\png;base64,{0}">'.format(data_uri)
-        print(img_tag)
+        img = "2c.png"
+        document.querySelector("img").setAttribute("src", img)
     </py-script>
+    <img id="img" src="src">
     </body>
 </html>
