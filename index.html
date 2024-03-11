@@ -4,6 +4,7 @@
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
     </head>
     <body>
+    <button py-click="randomCard()" id="Button">Random Card</button>
     <py-script>
         from js import document
         import random
@@ -20,7 +21,6 @@
         image = document.getElementById("img")
         image.src = img
     </py-script>
-    <button py-click="randomCard()" id="Button">Random Card</button>
     <img id="img" src=>
     </body>
 </html>
