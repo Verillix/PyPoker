@@ -5,9 +5,9 @@
     </head>
     <body>
     <py-script>
-        from js import document
+        from pyscript import document
         img = "2c.png"
-        image = Element("img")
+        image = document.getElementById("img")
         image.setAttribute("src", img)
     </py-script>
     <img id="img" src="src">
