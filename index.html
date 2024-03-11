@@ -3,7 +3,7 @@
     <head>
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
     </head>
-    <body>
+    <body onload="randomCard()">
     <button py-click="randomCard()" id="Button">Random Card</button>
     <py-script>
         from js import document
@@ -17,10 +17,10 @@
                   "Jd", "Qd", "Kd", "Ad"
               ]
             card = random.choice(deck)
-            img = card,".png"
-            image = document.getElementById("img")
-            image.src = ./Cards/img.png
-            image.alt = card
+        img = card,".png"
+        image = document.getElementById("img")
+        image.src = ./Cards/img.png
+        image.alt = card
     </py-script>
     <img id="img" src= alt=>
     </body>
