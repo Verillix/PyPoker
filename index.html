@@ -14,6 +14,16 @@
     </head>
     <body>
     <button id="bruh" onclick="randomNum()">Click Me!</button>
+    <script>
+        import { random } from 'random';
+        import { Document } from 'js';
+
+        function randomNum() {
+            const number = random.randint(1, 10);
+            const p = Document.getElementById("Text");
+            p.write("Hello World!");
+        }
+    </script>
     <p id="Text"></p>
     <img id="img1" src="" alt="">
     <img id="img2" src="" alt="">
