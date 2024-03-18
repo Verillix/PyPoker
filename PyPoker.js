@@ -1,3 +1,9 @@
+function test() {
+  let test = 1
+  test = test + 1
+  text = document.getElementById('Test')
+  text.innerHTML = "Proof it works!"
+
 function pokerGame() {
   let deck = [
     "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks",
